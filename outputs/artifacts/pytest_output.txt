@@ -1,0 +1,49 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0 -- /home/harshsingh/projects/feature-pipelines/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/harshsingh/projects/feature-pipelines
+configfile: pytest.ini
+collecting ... collected 40 items
+
+tests/test_feature_store.py::test_register_and_get_version PASSED        [  2%]
+tests/test_feature_store.py::test_two_versions_independently_retrievable PASSED [  5%]
+tests/test_feature_store.py::test_is_latest_points_to_highest_version PASSED [  7%]
+tests/test_feature_store.py::test_list_versions_returns_all_with_distinct_paths PASSED [ 10%]
+tests/test_feature_store.py::test_get_version_raises_for_missing PASSED  [ 12%]
+tests/test_feature_store.py::test_no_overwrite_of_existing_version PASSED [ 15%]
+tests/test_parity.py::test_training_scoring_parity PASSED                [ 17%]
+tests/test_parity.py::test_scoring_single_customer PASSED                [ 20%]
+tests/test_parity.py::test_as_of_date_in_output PASSED                   [ 22%]
+tests/test_quality_checks.py::test_null_check_passes_on_clean PASSED     [ 25%]
+tests/test_quality_checks.py::test_null_check_fires_on_null PASSED       [ 27%]
+tests/test_quality_checks.py::test_zero_activity_passes_on_correct_defaults PASSED [ 30%]
+tests/test_quality_checks.py::test_zero_activity_fires_when_nan_instead_of_default PASSED [ 32%]
+tests/test_quality_checks.py::test_monetary_bounds_passes_on_clean PASSED [ 35%]
+tests/test_quality_checks.py::test_monetary_bounds_fires_on_negative PASSED [ 37%]
+tests/test_quality_checks.py::test_monetary_bounds_fires_on_too_high PASSED [ 40%]
+tests/test_quality_checks.py::test_rate_bounds_passes_on_clean PASSED    [ 42%]
+tests/test_quality_checks.py::test_rate_bounds_fires_on_out_of_range PASSED [ 45%]
+tests/test_quality_checks.py::test_row_count_passes PASSED               [ 47%]
+tests/test_quality_checks.py::test_row_count_fires_on_mismatch PASSED    [ 50%]
+tests/test_quality_checks.py::test_run_all_passes_on_clean PASSED        [ 52%]
+tests/test_quality_checks.py::test_run_all_raises_on_failure PASSED      [ 55%]
+tests/test_transforms.py::test_days_since_last_txn_normal PASSED         [ 57%]
+tests/test_transforms.py::test_days_since_last_txn_zero_activity PASSED  [ 60%]
+tests/test_transforms.py::test_days_since_last_txn_boundary PASSED       [ 62%]
+tests/test_transforms.py::test_days_since_last_txn_future_excluded PASSED [ 65%]
+tests/test_transforms.py::test_spend_30d_normal PASSED                   [ 67%]
+tests/test_transforms.py::test_spend_30d_zero_activity PASSED            [ 70%]
+tests/test_transforms.py::test_spend_30d_boundary_excluded PASSED        [ 72%]
+tests/test_transforms.py::test_txn_count_90d_normal PASSED               [ 75%]
+tests/test_transforms.py::test_txn_count_90d_zero_activity PASSED        [ 77%]
+tests/test_transforms.py::test_return_rate_90d_normal PASSED             [ 80%]
+tests/test_transforms.py::test_return_rate_90d_zero_activity PASSED      [ 82%]
+tests/test_transforms.py::test_return_rate_90d_no_returns PASSED         [ 85%]
+tests/test_transforms.py::test_spend_velocity_normal PASSED              [ 87%]
+tests/test_transforms.py::test_spend_velocity_zero_activity PASSED       [ 90%]
+tests/test_transforms.py::test_spend_velocity_v2_window PASSED           [ 92%]
+tests/test_transforms.py::test_engagement_score_normal PASSED            [ 95%]
+tests/test_transforms.py::test_engagement_score_zero_activity PASSED     [ 97%]
+tests/test_transforms.py::test_engagement_score_v2_weight PASSED         [100%]
+
+============================== 40 passed in 1.68s ==============================
